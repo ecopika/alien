@@ -1,0 +1,1 @@
+{"head":"","body":"","js":"\nTemplate.__checkName(\"info\");\nTemplate[\"info\"] = new Template(\"Template.info\", (function() {\n  var view = this;\n  return HTML.Raw('<div id=\"info\">\\n\\t<h1>Informació empresa</h1>\\n</div>');\n}));\n","bodyAttrs":{}}
