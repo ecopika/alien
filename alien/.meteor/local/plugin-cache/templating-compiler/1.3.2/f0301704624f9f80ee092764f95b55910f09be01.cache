@@ -1,1 +1,0 @@
-{"head":"","body":"","js":"\nTemplate.__checkName(\"socialMedia\");\nTemplate[\"socialMedia\"] = new Template(\"Template.socialMedia\", (function() {\n  var view = this;\n  return HTML.Raw('<div id=\"socialMedia\">\\n\\t<h1>Xarxes Socials</h1>\\n\\n</div>');\n}));\n","bodyAttrs":{}}

@@ -1,1 +1,0 @@
-{"head":"","body":"","js":"\nTemplate.__checkName(\"bestSellers\");\nTemplate[\"bestSellers\"] = new Template(\"Template.bestSellers\", (function() {\n  var view = this;\n  return HTML.Raw('<div id=\"bestSellers\">\\n\\n\\t<h1>Més venuts</h1>\\n\\n</div>');\n}));\n","bodyAttrs":{}}

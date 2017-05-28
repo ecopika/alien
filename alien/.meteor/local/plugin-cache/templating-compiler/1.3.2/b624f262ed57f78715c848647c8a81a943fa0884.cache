@@ -1,1 +1,0 @@
-{"head":"","body":"","js":"\nTemplate.__checkName(\"walkerStory\");\nTemplate[\"walkerStory\"] = new Template(\"Template.walkerStory\", (function() {\n  var view = this;\n  return HTML.Raw('<div id=\"walkerStory\">\\n\\t<h1>Walker Story</h1>\\n\\n</div>');\n}));\n","bodyAttrs":{}}
