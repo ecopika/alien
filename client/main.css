@@ -7,6 +7,10 @@ body {
 	background-attachment: scroll;
 }
 
+a{
+    text-decoration: none;
+}
+
 header {
 	text-align: center;
 }
@@ -135,14 +139,20 @@ img{
 
 }
 
+.carousel-inner{
+    max-height: 750px !important;
+    margin-bottom: 0.3%;
+}
+
 .vertAlign{
     display: flex;
     align-items: center;
 }
 
-#bestTitle{
+.bestTitle{
 
     margin-top: 5%;
+    margin-bottom: 3%;
 
 }
 
@@ -151,8 +161,26 @@ img{
     border-color: red;
 }
 
-#bestSellers{
+.bestSellers{
     height: 100%;
+
+}
+
+.sep-medium-bottom{
+    margin-bottom:70%;
+}
+
+.price-box{
+    text-align: center;
+}
+
+.price{
+    font-size: 16px;
+}
+
+.names{
+    font-size: 19px;
+    font-weight: bold;
 }
 
 .fullheight{
@@ -169,3 +197,95 @@ img{
 .separadors{
 
 }
+
+/* BRING TOP */
+
+
+.scroll-top-wrapper {
+    position: fixed;
+	opacity: 0;
+	visibility: hidden;
+	overflow: hidden;
+	text-align: center;
+	z-index: 99999999;
+    background-color: #777777;
+	color: #eeeeee;
+	width: 50px;
+	height: 48px;
+	line-height: 48px;
+	right: 30px;
+	bottom: 30px;
+	padding-top: 2px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.scroll-top-wrapper:hover {
+	background-color: #888888;
+}
+.scroll-top-wrapper.show {
+    visibility:visible;
+    cursor:pointer;
+	opacity: 1.0;
+}
+.scroll-top-wrapper i.fa {
+	line-height: inherit;
+}
+
+.clear{
+    clear: both;
+}
+
+/* FOOTER */
+
+footer{
+    min-height: 200px;
+    background-color: #333;
+    margin-top: 0.3%;
+    color:white;
+    padding:2%;
+
+}
+
+
+
+.list-menu-footer{
+    list-style: none;
+}
+
+.list-menu-footer a{
+    color:white;
+}
+
+.list-menu-footer a:hover{
+    text-decoration: none;
+    color:lightgrey;
+}
+
+.menu-footer{
+    vertical-align: baseline;
+}
+
+/* OFFERS */
+
+.fixed{
+    background-image: url("images/home-0-parallax-1.jpg");
+    min-height: 450px;
+    margin-top: 5px;
+    background-attachment: fixed;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#offerts{
+    margin-top: 0.3%;
+}
+
+
