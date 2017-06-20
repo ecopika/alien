@@ -22,9 +22,7 @@ Template.carrousel.helpers({
 	]
 });
 
-Template.carouselList.onRendered(function(){
 
-});
 
 /* BRING TOP    */
 
