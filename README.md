@@ -66,14 +66,18 @@ l'id de cada producte.
 Per fer-ho necessitarem crear rutes de forma dinàmica.
 
 Per al nostre cas per exemple, que volem mostrar el nom, o l'identificador de cada producte, haurem de fer el segûent:
-    -Creem una plantilla amb el nom product_page.html, que mostra la informació del producte.
-     client/templates/products/product_page.html
-    -Afegim al fitxer lib/router.js el següent:
-       ```javascript
-            Router.route('products/:_id',{
-                name:'productPage'
-            });
-         ```
+
+  -Creem una plantilla amb el nom product_page.html, que mostra la informació del producte.
+   client/templates/products/product_page.html
+    
+  -Afegim al fitxer lib/router.js el següent:
+  
+  
+```javascript
+    Router.route('products/:_id',{
+        name:'productPage'
+});
+```
 La sitaxis especial (:\_id) ens diu dues coses al router; primer, que trobi qualsevol ruta de la forma /products/xyz/ , on "xyz" pot ser qualsevol cadena. La segona, posa tot el que troba dins de la propietat \_id al vector de paràmetres del router.
 
 D'aquesta manera aconseguim que el router conegui l'id del producte que ens agradaria mostrar.
@@ -88,8 +92,8 @@ En el nostre cas, podem btenir el context de dades correcte mitjançant la cerca
 ```javascript
     Router.route('products/:_id,{
         name:'productPage',
-        data: function(){ return Products.findOne(this.params.\_id);}
-    });
+        data: function(){ return Products.findOne(this.params._id);}
+    );
     
 ```
 
