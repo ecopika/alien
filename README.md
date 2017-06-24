@@ -48,13 +48,13 @@ El nostre fitxer layout contindrà el contingut fix, que volem que es vegi a tot
 Per a mapejar els coninguts dinàmics amb les seves url's corresponents, creem un fitxer lib/router.js a l'arrel del nostre
 projecte. A dins hi definim:
 
-'''javascript
+```javascript
     Router.configure({
         layoutTemplate: 'layout'
     });
     
     Router.route('/',{name:'nomPlantilla'});
-'''
+```
 
 Aquí fem dues coses importants; primer li diguem al router que utilitzi el nostre layout com a predeterminat. Després li diguem que quan la URL es correspongui a '/' ens carregui la plantilla que li assignem.
 
@@ -69,11 +69,11 @@ Per al nostre cas per exemple, que volem mostrar el nom, o l'identificador de ca
     -Creem una plantilla amb el nom product_page.html, que mostra la informació del producte.
      client/templates/products/product_page.html
     -Afegim al fitxer lib/router.js el següent:
-        '''javascript
+       ```javascript
             Router.route('products/:_id',{
                 name:'productPage'
             });
-         '''
+         ```
 La sitaxis especial (:\_id) ens diu dues coses al router; primer, que trobi qualsevol ruta de la forma /products/xyz/ , on "xyz" pot ser qualsevol cadena. La segona, posa tot el que troba dins de la propietat \_id al vector de paràmetres del router.
 
 D'aquesta manera aconseguim que el router conegui l'id del producte que ens agradaria mostrar.
@@ -81,17 +81,17 @@ Ara bé, falta trobar com fer que la plantilla també conegui aquest id.
 
 El router integra una sol·lució intel·ligent per aquest problema, permet especificar el context de dades d'una plantilla.
 
-[esq2](http://i.imgur.com/Clh5bfB.jpg)
+![esq2](http://i.imgur.com/Clh5bfB.jpg)
 
 En el nostre cas, podem btenir el context de dades correcte mitjançant la cerca del nostre producte basat en l'\_id que rebem de la URL.
 
-'''javascript
+```javascript
     Router.route('products/:_id,{
         name:'productPage',
         data: function(){ return Products.findOne(this.params.\_id);}
     });
     
-'''
+```
 
 El this es correspon amb la ruta actual i podem emprar this.params per accedir a les propietats de la ruta.
     
