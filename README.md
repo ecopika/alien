@@ -90,10 +90,10 @@ El router integra una sol·lució intel·ligent per aquest problema, permet espe
 En el nostre cas, podem btenir el context de dades correcte mitjançant la cerca del nostre producte basat en l'\_id que rebem de la URL.
 
 ```javascript
-    Router.route('products/:_id,{
+    Router.route('products/:_id',{
         name:'productPage',
         data: function(){ return Products.findOne(this.params._id);}
-    );
+    });
     
 ```
 
