@@ -1,14 +1,31 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-import './main.html';
-import './templates/fixes/header.html';
-import './templates/principal/carrousel.html';
+
 
 //equivalent al onReady de jquery
 Template.header.onRendered(function(){
 
-	changeNavInScroll();	
+	changeNavInScroll();
+		$(document).on( 'scroll', function(){
+
+		if ($(window).scrollTop() > 100) {
+			$('.scroll-top-wrapper').addClass('show');
+		} else {
+			$('.scroll-top-wrapper').removeClass('show');
+		}
+	});
+
+			$(document).on( 'scroll', function(){
+
+		if ($(window).scrollTop() > 100) {
+			$('.scroll-top-wrapper').addClass('show');
+		} else {
+			$('.scroll-top-wrapper').removeClass('show');
+		}
+	});
+
+	$('.scroll-top-wrapper').on('click', scrollToTop);
 
 });
 
@@ -26,31 +43,6 @@ Template.carrousel.helpers({
 
 /* BRING TOP    */
 
-$(function(){
-
-	$(document).on( 'scroll', function(){
-
-		if ($(window).scrollTop() > 100) {
-			$('.scroll-top-wrapper').addClass('show');
-		} else {
-			$('.scroll-top-wrapper').removeClass('show');
-		}
-	});
-});
-
-$(function(){
-
-	$(document).on( 'scroll', function(){
-
-		if ($(window).scrollTop() > 100) {
-			$('.scroll-top-wrapper').addClass('show');
-		} else {
-			$('.scroll-top-wrapper').removeClass('show');
-		}
-	});
-
-	$('.scroll-top-wrapper').on('click', scrollToTop);
-});
 
 function scrollToTop() {
 	verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
