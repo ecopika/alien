@@ -38,6 +38,6 @@ a una plantilla especial que conté un ajudant {{>yield}}.
 Aquest ajudant definirà una zona dinàmica especial que mostrarà automàticament el que correspon a la ruta actual. La zona 
 dinàmica l'anomenem Route Template.
 
-![alt text](http://imgur.com/tS9ROyB)
+![Esq1](http://i.imgur.com/tS9ROyB.jpg)
 
 
