@@ -27,16 +27,21 @@ Template.header.onRendered(function(){
 
 	$('.scroll-top-wrapper').on('click', scrollToTop);
 
+	$('#add').on('click',function(e){
+        $('#modalAfegirProducte').modal('show');
+    });
+
+
 });
 
 Template.carrousel.helpers({
-	carouselItems:[
-		{imageUrl:"public/images/home-0-slide-7c.jpg"},
-		{imageUrl:"public/images/home-0-slide-7c.jpg"},
-		{imageUrl:"public/images/home-0-slide-7c.jpg"}
+		carouselItems:[
+			{imageUrl:"public/images/home-0-slide-7c.jpg"},
+			{imageUrl:"public/images/home-0-slide-7c.jpg"},
+			{imageUrl:"public/images/home-0-slide-7c.jpg"}
 
 
-	]
+		]
 });
 
 
