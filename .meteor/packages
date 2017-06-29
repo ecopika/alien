@@ -23,3 +23,6 @@ twbs:bootstrap
 underscore
 iron:router
 aldeed:autoform
+cfs:standard-packages
+cfs:gridfs
+yogiben:autoform-file
