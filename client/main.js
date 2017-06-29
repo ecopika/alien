@@ -3,6 +3,7 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 
 
+
 //equivalent al onReady de jquery
 Template.header.onRendered(function(){
 
@@ -26,6 +27,10 @@ Template.header.onRendered(function(){
 	});
 
 	$('.scroll-top-wrapper').on('click', scrollToTop);
+
+    $('#add').on('click',function(e){
+        $('#modalAfegirProducte').modal('show');
+    });
 
 });
 
