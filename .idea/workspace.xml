@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3187988e-e7f6-4ae9-94fe-318199fb0047" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/principal/productesModal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/schema.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/alien.iml" afterPath="$PROJECT_DIR$/.idea/alien.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/packages" afterPath="$PROJECT_DIR$/.meteor/packages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/versions" afterPath="$PROJECT_DIR$/.meteor/versions" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.js" afterPath="$PROJECT_DIR$/client/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/fixes/header.html" afterPath="$PROJECT_DIR$/client/templates/fixes/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/pages/index.html" afterPath="$PROJECT_DIR$/client/templates/pages/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/pages/layout.html" afterPath="$PROJECT_DIR$/client/templates/pages/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/main.js" afterPath="$PROJECT_DIR$/server/main.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -121,7 +110,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ModalAfegirProducte" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
@@ -329,6 +318,7 @@
     <property name="js.meteor.library.was.enabled" value="true" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -423,12 +413,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495813033338</updated>
-      <workItem from="1498727951150" duration="3777000" />
+      <workItem from="1498727951150" duration="3863000" />
     </task>
+    <task id="LOCAL-00001" summary="Formulari afegir porducte">
+      <created>1498732372663</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1498732372663</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4771000" />
+    <option name="totallyTimeSpent" value="4857000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="5" width="1678" height="1006" extended-state="0" />
@@ -460,6 +458,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Formulari afegir porducte" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formulari afegir porducte" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
