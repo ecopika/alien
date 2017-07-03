@@ -9,7 +9,7 @@
                     <h4 class="modal-title" id="myModalLabel">Afegir un producte</h4>
                 </div>
                 <div class="modal-body">
-                    {{#autoForm schema="schemaproducts" id="insertProducte" type="insert"}}
+                    {{#autoForm collection="productes" id="productesModalTemplate" type="insert" }}
                         <fieldset>
                             {{> afQuickField name='nom'}}
                             {{> afQuickField name='unitats'}}

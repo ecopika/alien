@@ -2,7 +2,8 @@ import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
 
-
+Meteor.subscribe("images");
+Meteor.subscribe("productes");
 
 //equivalent al onReady de jquery
 Template.header.onRendered(function(){

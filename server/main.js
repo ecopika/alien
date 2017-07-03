@@ -1,7 +1,6 @@
 import { Meteor } from 'meteor/meteor';;
 
 Meteor.startup(() => {
-
 Images = new FS.Collection("images", {
     stores: [new FS.Store.GridFS("images", {})]
 });
@@ -13,6 +12,15 @@ Images = new FS.Collection("images", {
         return true;
     }
 });
+
+    productes.allow({
+        insert:function () {
+            return true;
+        },
+        remove:function () {
+            return true;
+        }
+    });
 
 
     // code to run on server at startup
@@ -26,9 +34,9 @@ Images = new FS.Collection("images", {
        // console.log("EXISTEIX LA CAMISA 1: "+productes.findOne({_id:'CAMISA1'}).nom);
     }
 
-    Meteor.publish('images', function() {
-        return Images.find();
-    });
+
 
 
 });
+
+

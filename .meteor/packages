@@ -26,3 +26,4 @@ cfs:standard-packages
 cfs:gridfs
 yogiben:autoform-file
 dynamic-import@0.1.0
+cfs:autoform
