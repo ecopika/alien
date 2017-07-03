@@ -27,3 +27,5 @@ cfs:gridfs
 yogiben:autoform-file
 dynamic-import@0.1.0
 cfs:autoform
+aldeed:collection2-core
+aldeed:simple-schema

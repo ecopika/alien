@@ -1,26 +1,12 @@
 import { Meteor } from 'meteor/meteor';;
 
-Meteor.startup(() => {
-Images = new FS.Collection("images", {
-    stores: [new FS.Store.GridFS("images", {})]
-});
-    Images.allow({
-    'insert': function(userId, doc) {
-        return true;
-    },
-    'download': function(userId) {
-        return true;
-    }
-});
 
-    productes.allow({
-        insert:function () {
-            return true;
-        },
-        remove:function () {
-            return true;
-        }
-    });
+
+
+Meteor.startup(() => {
+
+
+
 
 
     // code to run on server at startup

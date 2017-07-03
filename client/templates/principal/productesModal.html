@@ -9,16 +9,8 @@
                     <h4 class="modal-title" id="myModalLabel">Afegir un producte</h4>
                 </div>
                 <div class="modal-body">
-                    {{#autoForm collection="productes" id="productesModalTemplate" type="insert" }}
-                        <fieldset>
-                            {{> afQuickField name='nom'}}
-                            {{> afQuickField name='unitats'}}
-                            {{> afQuickField name='valoracio'}}
-                            {{> afQuickField name='material'}}
-                            {{> afQuickField name='pictures'}}
-                        </fieldset>
-                        <button type="submit" class="btn btn-primary">Insert</button>
-                    {{/autoForm}}
+                    {{> quickForm collection="productes" id="AddProductesForm" type="method" meteormethod="addProductData" resetOnSuccess=true}}
+
 
                 </div>
                 <div class="modal-footer">

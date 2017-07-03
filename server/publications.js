@@ -7,4 +7,4 @@
 
     Meteor.publish('productes',function () {
         return productes.find();
-    })
+    });
