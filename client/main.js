@@ -33,6 +33,15 @@ Template.header.onRendered(function(){
         $('#modalAfegirProducte').modal('show');
     });
 
+
+    $('.af-select-file.js-af-select-file').on('click',function(event){
+			$(event.target).find("input.js-file").click();
+		
+	});
+
+
+
+
 });
 
 Template.carrousel.helpers({
