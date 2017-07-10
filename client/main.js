@@ -39,6 +39,8 @@ Template.carrousel.helpers({
 	]
 });
 
+/*formulari per afegir productes **/
+var pics = [];
 Template.addProductForm.events({
 	'submit form': function(e){
 		e.preventDefault();
@@ -48,12 +50,35 @@ Template.addProductForm.events({
 			descripcio:$(e.target).find('[name=prodDesc]').val(),
 			material:$(e.target).find('[name=prodMaterial]').val(),
 			valoracio:$(e.target).find('[name=prodValoracio]').val(),
-			pictures:['shop-1-image-1a-626x798.jpg']
+			pictures:pics
 		}
 
 		product._id = productes.insert(product);
-	}
+	},
+	'change .prodPictures': function(event, template) {
+     FS.Utility.eachFile(event, function(file) {
+     ids = Images.insert(file, function (err, fileObj) {
+        // Inserted new doc with ID fileObj._id, and kicked off the data upload using HTTP
+      });
+     pics.push(ids.original.name);
+
+    });
+
+
+  }
 });
+
+//mostrar imatges pujades
+
+Template.imageView.helpers({
+  images: function () {
+    return Images.find(); // Where Images is an FS.Collection instance
+  }
+});
+
+
+/**************FI FORMULARI************/
+
 
 
 

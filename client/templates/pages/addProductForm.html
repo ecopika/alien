@@ -27,9 +27,14 @@
 
             <input name="prodValoracio" id="prodValoracio" min="0" max="5" type="number" step="1" required>
                         </div>
+                            <label class="control-label" for="prodPictures">Imatges</label>
+                        <div class="controls">
+                            <input type="file" id="prodPictures" class="prodPictures"/>
+                        </div>
 
 
             </div>
+          {{>imageView}}
                   <input type="submit" class="btn btn-primary" value="Add Product">
 
     </form>

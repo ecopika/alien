@@ -24,3 +24,5 @@ underscore@1.0.10
 iron:router
 dynamic-import@0.1.0
 aldeed:simple-schema
+cfs:standard-packages
+cfs:filesystem
