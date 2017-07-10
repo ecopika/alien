@@ -1,0 +1,36 @@
+<template name="addProductForm">
+    <br/><br/><br/><br/><br/><br/><br/>
+      <form class="main form page">
+        <div class="form-group">
+                <label class="control-label" for="prodName">Nom Producte</label>
+                        <div class="controls">
+
+                <input name="prodName" id="prodName" type="text" value="" required placeholder="Product name"/>
+                        </div>
+                <label class="control-label" for="prodUnitats">Unitats</label>
+                        <div class="controls">
+
+            <input name="prodUnitats" id="prodUnitats" min="0" type="number" step="1" required>
+                        </div>
+                <label class="control-label" for="prodDesc">Descripció</label>
+                        <div class="controls">
+
+            <textarea rows="4" cols="50" name="prodDesc" id="prodDesc">Entra la descripció...</textarea>
+                        </div>
+                <label class="control-label" for="prodMaterial">Material</label>
+                        <div class="controls">
+
+            <input name="prodMaterial" id="prodMaterial" type="text" value="" required placeholder="Product material"/>
+                        </div>
+                <label class="control-label" for="prodValoracio">Valoracio</label>
+                        <div class="controls">
+
+            <input name="prodValoracio" id="prodValoracio" min="0" max="5" type="number" step="1" required>
+                        </div>
+
+
+            </div>
+                  <input type="submit" class="btn btn-primary" value="Add Product">
+
+    </form>
+</template>

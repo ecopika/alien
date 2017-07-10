@@ -39,6 +39,22 @@ Template.carrousel.helpers({
 	]
 });
 
+Template.addProductForm.events({
+	'submit form': function(e){
+		e.preventDefault();
+		var product = {
+			nom:$(e.target).find('[name=prodName]').val(),
+			unitats:$(e.target).find('[name=prodUnitats]').val(),
+			descripcio:$(e.target).find('[name=prodDesc]').val(),
+			material:$(e.target).find('[name=prodMaterial]').val(),
+			valoracio:$(e.target).find('[name=prodValoracio]').val(),
+			pictures:['shop-1-image-1a-626x798.jpg']
+		}
+
+		product._id = productes.insert(product);
+	}
+});
+
 
 
 /* BRING TOP    */
