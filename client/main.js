@@ -1,7 +1,11 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-
+Meteor._reload.onMigrate(function() {
+     return [false];
+});
+pathProdImages = "/products/";
+pathPublicImages = "images";
 
 //equivalent al onReady de jquery
 Template.header.onRendered(function(){
@@ -27,16 +31,40 @@ Template.header.onRendered(function(){
 
 	$('.scroll-top-wrapper').on('click', scrollToTop);
 
+
+
+
+
+});
+
+Template.header.helpers({
+	categorias:function () {
+		return categories.find();
+    },
+
+});
+
+Template.addProductForm.helpers({
+	categorias:function () {
+		return categories.find();
+    },
+	selected:function(){
+		return categories.findOne({},{sort: {createdAt: 1}, limit: 1}).pictures[0];
+	},
 });
 
 Template.carrousel.helpers({
-	carouselItems:[
-		{imageUrl:"public/images/home-0-slide-7c.jpg"},
-		{imageUrl:"public/images/home-0-slide-7c.jpg"},
-		{imageUrl:"public/images/home-0-slide-7c.jpg"}
 
+//retorno les imatges de BD
+	products:function(){
+		var id = productes.findOne({},{sort: {createdAt: 1}, limit: 1})._id;
+		return productes.find({_id:{$ne:id}});
+	},
 
-	]
+	firstImage:function(){
+		return productes.findOne({},{sort: {createdAt: 1}, limit: 1}).pictures[0];
+	},
+
 });
 
 /*formulari per afegir productes **/
@@ -44,12 +72,14 @@ var pics = [];
 Template.addProductForm.events({
 	'submit form': function(e){
 		e.preventDefault();
+
 		var product = {
 			nom:$(e.target).find('[name=prodName]').val(),
 			unitats:$(e.target).find('[name=prodUnitats]').val(),
 			descripcio:$(e.target).find('[name=prodDesc]').val(),
 			material:$(e.target).find('[name=prodMaterial]').val(),
 			valoracio:$(e.target).find('[name=prodValoracio]').val(),
+			categories:$(e.target).find('[name=prodCat]').val(),
 			pictures:pics
 		}
 
@@ -57,11 +87,19 @@ Template.addProductForm.events({
 	},
 	'change .prodPictures': function(event, template) {
      FS.Utility.eachFile(event, function(file) {
-     ids = Images.insert(file, function (err, fileObj) {
+     	//genero numero a l'atzar per a que no hi hagi repetició d'imatges
+     	metaR = Math.floor((Math.random() * 100) + 1);
+     	newFile = new FS.File(file);
+     	meta = "meta-"+metaR;
+     	newFile.metadata = {metaProd:meta};
+     	newFile.url = ({auth:false});
+     ids = Images.insert(newFile, function (err, fileObj) {
         // Inserted new doc with ID fileObj._id, and kicked off the data upload using HTTP
       });
-     pics.push(ids.original.name);
+     //genero array per despres afegir les dades a la BD
+     	pathSencer = pathPublicImages+pathProdImages+ids.collectionName+"-"+ids._id+"-"+ids.original.name;
 
+		 pics.push(pathSencer);
     });
 
 
@@ -70,10 +108,11 @@ Template.addProductForm.events({
 
 //mostrar imatges pujades
 
-Template.imageView.helpers({
-  images: function () {
-    return Images.find(); // Where Images is an FS.Collection instance
-  }
+Template.removeProduct.helpers({
+	products:function(){
+		return productes.find();
+	}
+
 });
 
 

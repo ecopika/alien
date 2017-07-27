@@ -32,9 +32,17 @@
                             <input type="file" id="prodPictures" class="prodPictures"/>
                         </div>
 
+            <div class="controls">
+                <select multiple name="prodCat" id="prodCat">
+                    <option selected disabled hidden style='display: none' value=''></option>
+                    {{#each categorias}}
+                    <option value="{{this.nom}}">{{this.nom}}</option>
+                    {{/each}}
+                </select>
+            </div>
+
 
             </div>
-          {{>imageView}}
                   <input type="submit" class="btn btn-primary" value="Add Product">
 
     </form>

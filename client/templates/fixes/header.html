@@ -4,7 +4,15 @@
 <div class="navbar-header"><br>
 	<ul>
        <li> <a class="navbar-brand" href="/">HOME</a></li>
-      <li>  <a class="navbar-brand" href="/">PRODUCTS</a></li>
+
+      <li><div class="dropdown">  <a href="/" class="navbar-brand dropdown-toggle" type="button" data-toggle="dropdown">PRODUCTS<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              {{#each categorias}}
+              <li><a href="/category/{{this.nom}}">{{this.nom}}</a> </li>
+                {{/each}}
+          </ul>
+
+      </div></li>
       <li>  <a class="navbar-brand" href="/">ABOUT US</a></li>
        <li><a class="navbar-brand" href="/">SHOP</a></li>
       <li><a class="navbar-brand" href="/">CARRITO</a></li>

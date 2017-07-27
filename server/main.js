@@ -11,7 +11,17 @@ Meteor.startup(() => {
        productes.insert({_id:'CAMISA1',nom:'Camisa hombre',imatges:['shop-1-image-1a-626x798.jpg']})
        // console.log("S'HA CREAT LA CAMISA 1");
     }else{
-        console.log("EXISTEIX LA CAMISA 1: "+productes.findOne({_id:'CAMISA1'}).nom);
+        console.log("EXISTEIX LA CAMISA 1: "+productes.findOne({_id:'y2eyXmEbbSbpziwjY'}).nom);
+    }
+
+    if(categories.find().count() == 0){
+        categories.insert({nom:"Verano"});
+        categories.insert({nom:"Invierno"});
+        categories.insert({nom:"Sudaderas"});
+        categories.insert({nom:"Manga Corta"});
+        categories.insert({nom:"Manga Larga"});
+        categories.insert({nom:"Pantalones"});
+
     }
 
 });
