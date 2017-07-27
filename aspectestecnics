@@ -1,0 +1,2 @@
+He bloquejat l'auto refresh ja que la pujada d'imatges la fem de moment al directori public/ sempre que es penja alguna imatge a aquest directori
+ens trobem que s'actualitza, més endevant hem de pensar a canviar el directori on es penjen les imatges, i eliminar el bloquejador de l'autorefresh.
